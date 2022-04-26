@@ -90,3 +90,14 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    const transportation = data.reduce(function(obj, item) {
+      if(!obj[item]) { //setando la suma a 0 si no repite el item.
+        obj[item] = 0;
+      }
+      obj[item]++; //seteamos que sume 1 cada vez que se repita el item.
+      return obj; //guarde el obj.
+    }, {
+    });
+
+    console.log(transportation);
